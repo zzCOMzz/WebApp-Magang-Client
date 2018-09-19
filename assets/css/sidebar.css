@@ -1,0 +1,46 @@
+body {
+  background-color: #EEEEEE;
+}
+
+
+/* left navbar */
+#left-navbar{
+    background-color: #3f5a7c;
+    position: fixed;
+    width: 280px;
+    top :0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    box-shadow: 2px -1px 4px rgba(0, 0, 0, 0.3);
+}
+.content-hover {
+    cursor: pointer;
+    transition: 500ms;
+}
+.content-a {
+    text-decoration: none;
+    color: white;
+}
+.content-hover:hover{
+    background-color: white;
+    color: #212121;
+}
+.content-hover:hover .content-a {
+    color: #212121;
+}
+/* left navbar */
+
+
+.card-border-grey {
+    border: 2px solid #dfdfdf;
+}
+
+#main {
+    margin-left: 280px;
+    padding: 8px;
+}
+
+textarea[name=textArea] {
+  resize: none;
+}

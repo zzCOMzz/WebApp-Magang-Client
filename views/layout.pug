@@ -1,0 +1,29 @@
+html
+    head
+        title #{pageTitle}
+        link(rel="stylesheet", href="/assets/css/sidebar.css")
+        link(rel="stylesheet", href="/assets/css/style.css")
+        script(src="/assets/js/jquery.js")
+        script(src="/assets/js/bs.js")
+
+        block cssScript
+    body
+        //- left navbar
+        nav(id="left-navbar")
+            div(id="left-navbar-header",class="bg-primary text-light p-2")
+                h4(class="m-0") #{pageTitle}
+            div(id="left-navbar-content" ,class="bg-primary mt-4 text-light")
+                div(class="p-2 content-hover")
+                    i(class="fa fa-home mx-1")
+                    a(class="mx-1 content-a",href="/home") Home
+                div(class="p-2 content-hover")
+                    i(class="fa fa-plus-circle mx-1")
+                    a(class="mx-1 content-a",href="/form") Form
+                div(class="p-2 content-hover")
+                    i(class="fa fa-bars mx-1")
+                    a(class="mx-1 content-a",href="/listTamu") List Tamu
+
+        //- main container
+        div(id="main")
+            block mainContainer
+    block jsScript

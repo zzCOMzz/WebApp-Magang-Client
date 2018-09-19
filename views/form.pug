@@ -1,0 +1,58 @@
+extends layout
+
+
+block jsScript
+    script(src="/assets/js/form.js")
+
+
+block mainContainer
+    div(class="modal fade",id="modal-form")
+        div(class="modal-dialog modal-lg")
+            div(class="modal-content")
+                div(class="modal-header")
+                    h5(class="modal-title") Silahkan Ambil Foto Tamu
+                div(class="modal-body")
+                    p Hello body
+
+
+    div(class="jumbotron jumbotron-fluid")
+        hr
+        div(class="container")
+            form(action="")
+                div(class="form-group row")
+                    label(for="NumberIdentity", class="col-sm-2 col-form-label") NIK/NIP/No.SIM 
+                    div(class="col-sm-10")
+                        input(type="text", class="form-control",name="numberidentity", id="NumberIdentity", placeholder="Nomor Kartu Identitas Yang Dimiliki", autofocus)
+                div(class="form-group row")
+                    label(for="Name", class="col-sm-2 col-form-label") Nama
+                    div(class="col-sm-10")
+                        input(type="text", class="form-control", id="Name",name="name", placeholder="Nama")
+                fieldset(class="form-group")
+                    div(class="row")
+                        legend(class="col-form-label col-sm-2 pt-0") Jenis Kelamin
+                        div(class="col-sm-10")
+                            div(class="form-check")
+                                input(class="form-check-input", type="radio", name="gridRadios", id="gridRadios1", value="option1", checked)
+                                label(for="gridRadios1", class="form-check-label") Laki-Laki
+                            div(class="form-check")
+                                input(class="form-check-input", type="radio", name="gridRadios", id="gridRadios2", value="option2")
+                                label(for="gridRadios2", class="form-check-label") Perempuan
+                div(class="form-group row")
+                    label(for="Address", class="col-sm-2 col-form-label") Alamat/Instansi
+                    div(class="col-sm-10")
+                        input(type="text", class="form-control",name="Alamat", id="Address", placeholder="Alamat Atau Instansi")
+                div(class="form-group row")
+                    label(for="NumberTelpon", class="col-sm-2 col-form-label") No. Telepon
+                    div(class="col-sm-10")
+                        input(type="text", class="form-control",name="NoTelpon" ,id="Address", placeholder="No. Telepon")
+                div(class="form-group row")
+                    label(for="Destination", class="col-sm-2 col-form-label") Tujuan
+                    div(class="col-sm-10")
+                        textarea(name="textArea", cols="15", rows="4", class="form-control", id="Address", placeholder="Tujuan Atau Keperluan")
+                div(class="form-group row")
+                    label(for="takePicture",class="col-sm-2 col-form-label") Face ID 
+                    div(class="col-sm-10")
+                        button(class="btn btn-outline-primary",onclick="onAmbilFotoModal()",type="button") Ambil Foto
+                div(class="col-auto")
+                    button(type="submit" class="btn btn-primary") Selesai
+            
